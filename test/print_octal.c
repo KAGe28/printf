@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-  * print_hex_u- prints hex upper value
+  * print_octal- prints octal value
   * @args: list
   * Return: count
   */
 
-int print_hex_u(va_list args)
+int print_octal(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
 	int count = 0;
@@ -18,21 +18,19 @@ int print_hex_u(va_list args)
 	}
 	else
 	{
-		char hd[16] = "0123456789ABCDEF";
-
-		char hc[12];
+		unsigned int od[12];
 		int i = 0;
 		int j = 0;
 
 		while (n > 0)
 		{
-			hc[i] = hd[n % 16];
-			n /= 16;
+			od[i] = n % 8;
+			n /= 8;
 			i++;
 		}
 		for (j = i - 1; j >= 0; j--)
 		{
-			_putchar(hc[j]);
+			_putchar('0' + od[j]);
 			count++;
 		}
 	}

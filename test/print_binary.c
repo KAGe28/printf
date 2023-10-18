@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-  * print_hex_u- prints hex upper value
+  * print_binary- prints binary number
   * @args: list
   * Return: count
   */
 
-int print_hex_u(va_list args)
+int print_binary(va_list args)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	int n = va_arg(args, int);
 	int count = 0;
 
 	if (n == 0)
@@ -18,21 +18,19 @@ int print_hex_u(va_list args)
 	}
 	else
 	{
-		char hd[16] = "0123456789ABCDEF";
-
-		char hc[12];
+		int bits[32];
 		int i = 0;
 		int j = 0;
 
 		while (n > 0)
 		{
-			hc[i] = hd[n % 16];
-			n /= 16;
+			bits[i] = n % 2;
+			n /= 2;
 			i++;
 		}
 		for (j = i - 1; j >= 0; j--)
 		{
-			_putchar(hc[j]);
+			_putchar('0' + bits[j]);
 			count++;
 		}
 	}
