@@ -33,3 +33,46 @@ int print_string(va_list args)
 	}
 	return (count);
 }
+
+/**
+  * print_int- prints an integer
+  * @args: list
+  * Return: count
+  */
+
+int print_int(va_list args)
+{
+	int n = va_arg(args, int);
+	int count = 0;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n -= n;
+		count++;
+	}
+	if (n == 0)
+	{
+		_putchar('0');
+		count++;
+	}
+	else
+	{
+		int d[10];
+		int i = 0;
+		int j = 0;
+
+		while (n > 0)
+		{
+			d[i] = n % 10;
+			n /= 10;
+			i++;
+		}
+		for (j = i - 1; j >= 0; j--)
+		{
+			_putchar('0' + d[j]);
+			count++;
+		}
+	}
+	return (count);
+}

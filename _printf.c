@@ -30,6 +30,7 @@ int _printf(const char  *format, ...)
 				if (res == 0)
 				{
 					_putchar('%');
+					_putchar(*format);
 					count += 2;
 				}
 				else

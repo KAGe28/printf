@@ -12,6 +12,8 @@ int validate_format(char format, va_list args)
 	my_fs valid_format[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
 	};
 	int size = sizeof(valid_format) / sizeof(valid_format[0]);
 	int i;
