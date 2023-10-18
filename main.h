@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-<<<<<<< HEAD
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -115,39 +114,4 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-=======
-
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
-#ifndef NULL
-#define NULL ((void *)0)
-#endif
-
-/**
-  * struct f_struct- structure
-  * @format_char: the format character
-  * @f: the function associated
-  */
-
-typedef struct f_struct
-{
-	char format_char;
-	int (*f)(va_list);
-} my_fs;
-
-int _putchar(char c);
-int _strlen(char *s);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_int(va_list args);
-int print_binary(va_list args);
-int print_unsigned(va_list args);
-int print_octal(va_list args);
-int print_hex_l(va_list args);
-int print_hex_u(va_list args);
-int validate_format(char format, va_list args);
-int _printf(const char *format, ...);
->>>>>>> 911a48c97c2efb65159642027ce13dcb8ddc027c
 #endif /* MAIN_H */
