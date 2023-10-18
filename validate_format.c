@@ -14,6 +14,7 @@ int validate_format(char format, va_list args)
 		{'s', print_string},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_binary},
 	};
 	int size = sizeof(valid_format) / sizeof(valid_format[0]);
 	int i;
