@@ -10,7 +10,7 @@ int print_char(va_list args)
 {
 	int c = va_arg(args, int);
 
-	putchar(c);
+	_putchar(c);
 	return (1);
 }
 
@@ -25,11 +25,14 @@ int print_string(va_list args)
 	char *str = va_arg(args, char *);
 	int count = 0;
 
-	while (*str)
+	if (s != NULL)
 	{
-		putchar(*str);
-		str++;
-		count++;
+		while (*str)
+		{
+			_putchar(*str);
+			str++;
+			count++;
+		}	
 	}
 	return (count);
 }
