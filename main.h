@@ -29,8 +29,8 @@ int print_int(va_list args);
 int print_binary(va_list args);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
-int print_hex_l(va_list args)
-int print_hex_u(va_list args)
+int print_hex_l(va_list args);
+int print_hex_u(va_list args);
 int validate_format(char format, va_list args);
 int _printf(const char *format, ...);
 #endif /* MAIN_H */

@@ -19,7 +19,9 @@ int print_hex_l(va_list args)
 	else
 	{
 		char hd[16] = "0123456789abcdef;
+
 		char hc[12];
+
 		int i = 0;
 		int j = 0;
 
