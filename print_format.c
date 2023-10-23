@@ -25,11 +25,14 @@ int print_string(va_list args)
 	char *str = va_arg(args, char *);
 	int count = 0;
 
-	while (*str)
+	if ( str != NULL)
 	{
-		_putchar(*str);
-		str++;
-		count++;
+		while (*str)
+		{
+			_putchar(*str);
+			str++;
+			count++;
+		}
 	}
 	return (count);
 }
